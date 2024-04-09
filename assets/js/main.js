@@ -39,8 +39,14 @@ window.onscroll = () => {
     /*Remove Navbar and icon*/
     menuIcon.classList.remove('fa-xmark');
     navbar.classList.remove('active');
-    
+
 
 
 }
+
+
+
+// Update the copyright element
+let currentYear = new Date().getFullYear();
+document.getElementById("copyright").textContent = 'Copyright © ' + currentYear + " Luis Alvarez";
 
