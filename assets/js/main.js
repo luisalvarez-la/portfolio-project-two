@@ -56,19 +56,26 @@ document.getElementById("copyright").textContent = 'Copyright © ' + currentYear
 document.addEventListener("DOMContentLoaded", function() {
     const languageCheckbox = document.getElementById("languageCheckbox");
 
-    // Check if the checkbox should be checked based on the current page
+    
     const currentPageIsEnglish = window.location.pathname.includes("index.html");
     languageCheckbox.checked = currentPageIsEnglish;
 
-    // Add event listener to the checkbox
+   
     languageCheckbox.addEventListener("change", function() {
         if (this.checked) {
-            // Navigate to index.html if the checkbox is checked
+            
             window.location.href = '/alternative-repository/index.html';
         } else {
-            // Navigate to index-es.html if the checkbox is unchecked
-            window.location.href = './assets/lang/index-es.html'; // Update the path as needed
+            
+            window.location.href = './assets/lang/index-es.html'; 
         }
     });
 });
 
+
+//Change language title in toggle
+const toggle = document.querySelector('.toggle input');
+toggle.addEventListener('click', () => {
+    const toggling = toggle.parentNode.querySelector('.toggling');
+    toggling.textContent = toggle.checked ? 'English' : 'Español';
+})
