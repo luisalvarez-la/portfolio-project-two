@@ -1,4 +1,3 @@
-
 /*Font*/
 @import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
 
@@ -63,6 +62,81 @@ section {
     font-weight: 700;
     cursor: default;
 }
+
+
+
+
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 28px;
+}
+
+.checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s ease;
+}
+
+.checkbox:checked+.label {
+    background-color: #135D66;
+    /* Change to your desired color for checked state */
+}
+
+.label:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* Change to your desired color for the circle */
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s ease;
+}
+
+.checkbox:checked+.label:before {
+    transform: translateX(26px);
+}
+
+/* Flag icons */
+.label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
+    background-image: url('https://www.flaticon.com/free-icons/united-states');
+    /* Path to USA flag icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.checkbox:checked+.label:after {
+    background-image: url('https://img.freeflagicons.com/thumb/glossy_square_icon/mexico/mexico_64.pnghttps://img.freeflagicons.com/thumb/glossy_square_icon/mexico/mexico_64.png'); 
+    
+    /* Path to Mexico flag icon */
+}
+
+
+
+
+
 
 .navbar a {
     font-size: 1.5rem;
@@ -221,7 +295,7 @@ span {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap:2rem
+    gap: 2rem
 }
 
 .services-container .services-box {
@@ -265,7 +339,7 @@ span {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -279,23 +353,23 @@ span {
 
 }
 
-.portfolio-box  img {
+.portfolio-box img {
     width: 100;
     transition: .5s ease;
     opacity: 0.7;
 
-   
+
 
 }
 
 .portfolio-box:hover img {
     transform: scale(1.1);
 }
-    
+
 .portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
@@ -350,13 +424,15 @@ span {
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .contact form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.contact form .input-box input, .contact form textarea {
+.contact form .input-box input,
+.contact form textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -373,6 +449,7 @@ span {
 .contact form textarea {
     resize: none;
 }
+
 .contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
@@ -392,7 +469,7 @@ span {
 .footer-text {
     font-size: 1.6rem;
 }
-    
+
 .footer-go-up {
     display: inline-flex;
     justify-content: center;
@@ -464,7 +541,7 @@ span {
         padding: 1rem 3%;
         background: var(--bg-color);
         border-top: 1rem, solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2) ;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
 
@@ -549,4 +626,3 @@ span {
     }
 
 }
-

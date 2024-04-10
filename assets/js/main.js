@@ -32,11 +32,11 @@ window.onscroll = () => {
 
     });
 
-    /*Fix Navbar*/
+    /*Fix Navbar and remove Navbar and Icon*/
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
-    /*Remove Navbar and icon*/
+    
     menuIcon.classList.remove('fa-xmark');
     navbar.classList.remove('active');
 
@@ -49,4 +49,26 @@ window.onscroll = () => {
 // Update the copyright element
 let currentYear = new Date().getFullYear();
 document.getElementById("copyright").textContent = 'Copyright © ' + currentYear + " Luis Alvarez";
+
+
+// Switch language English/Spanish
+
+document.addEventListener("DOMContentLoaded", function() {
+    const languageCheckbox = document.getElementById("languageCheckbox");
+
+    // Check if the checkbox should be checked based on the current page
+    const currentPageIsEnglish = window.location.pathname.includes("index.html");
+    languageCheckbox.checked = currentPageIsEnglish;
+
+    // Add event listener to the checkbox
+    languageCheckbox.addEventListener("change", function() {
+        if (this.checked) {
+            // Navigate to index.html if the checkbox is checked
+            window.location.href = '/alternative-repository/index.html';
+        } else {
+            // Navigate to index-es.html if the checkbox is unchecked
+            window.location.href = './assets/lang/index-es.html'; // Update the path as needed
+        }
+    });
+});
 
