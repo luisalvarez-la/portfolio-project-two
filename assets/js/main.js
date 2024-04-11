@@ -64,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function() {
     languageCheckbox.addEventListener("change", function() {
         if (this.checked) {
             
-            window.location.href = '/alternative-repository/index.html';
+            window.location.href = 'index.html';
         } else {
             
-            window.location.href = './assets/lang/index-es.html'; 
+            window.location.href = 'index-es.html'; 
         }
     });
 });
